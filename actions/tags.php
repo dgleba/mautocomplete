@@ -12,7 +12,6 @@ if ($conn) {
     while ($row = mysql_fetch_array($fetch, MYSQL_ASSOC)) {
         $row_array['id'] = $row['tags_id'];
         $row_array['value'] = $row['tags_list'];
-        //$row_array['abbrev'] = $row['abbrev'];
 
         array_push($return_arr, $row_array);
     }
@@ -23,3 +22,4 @@ if ($conn) {
 
 /* Toss back results as json encoded array. */
 echo json_encode($return_arr);
+?>
