@@ -15,5 +15,15 @@ class modules_multipleautocomplete {
     $app = Dataface_Application::getInstance();
 	
 	$app->addHeadContent('<script src="'.htmlspecialchars($this->getBaseURL().'/js/multipleautocompleteTags.js').'"></script>');
+	
+	if ( !class_exists('Dataface_FormTool')){
+      $app->registerEventListener('Dataface_FormTool::init', array($this, '_registerWidget'));
+    }else{
+      $this->_registerWidget(Dataface_FormTool::getInstance());
+    }
+  }
+  
+  public function _registerWidget(Dataface_FormTool $formTool){
+    $formTool->registerWidgetHandler('multipleautocomplete', dirname(__FILE__).'/multipleautocompletewidget.php', 'Dataface_FormTool_multipleautocomplete');
   }
 }

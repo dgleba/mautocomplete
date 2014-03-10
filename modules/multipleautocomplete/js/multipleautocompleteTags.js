@@ -11,7 +11,7 @@
       return split(term).pop();
     }
     
-    $("#tags")
+    $(".xf-multipleautocomplete")
     
     .bind("keydown", function(event) {
     
@@ -25,7 +25,7 @@
     
       source: function(request, response) {
 	  
-        $.getJSON("actions/tags.php", {
+        $.getJSON("actions/multipleautocomplete.php", {
           term: extractLast(request.term)
         }, response);
       },
