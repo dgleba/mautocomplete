@@ -5,10 +5,8 @@ $table_name = $_POST['tname'];
 $file = 'multipleautocompleteField.tmp';
 
 $handle = fopen($file, "w");
-fwrite($handle, '1 = ');
-fwrite($handle, $table_name);
-fwrite($handle, '_tags'. PHP_EOL);
-fwrite($handle, '2 = ');
-fwrite($handle, $field_name);
+fwrite($handle, '1 = '. $table_name . '_tags');
+fwrite($handle, PHP_EOL);
+fwrite($handle, '2 = '. $field_name);
 fclose($handle);
 ?>
