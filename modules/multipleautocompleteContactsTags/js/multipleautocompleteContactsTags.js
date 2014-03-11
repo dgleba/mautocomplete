@@ -11,7 +11,7 @@
       return split(term).pop();
     }
     
-    $(".xf-multipleautocomplete")
+    $(".xf-multipleautocompleteContactsTags")
     
     .bind("keydown", function(event) {
     
@@ -25,7 +25,7 @@
     
       source: function(request, response) {
 	  
-        $.getJSON("actions/multipleautocomplete.php", {
+        $.getJSON("modules/multipleautocompleteContactsTags/actions/action_multipleautocompleteContactsTags.php", {
           term: extractLast(request.term)
         }, response);
       },

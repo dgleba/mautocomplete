@@ -1,5 +1,5 @@
 <?php
-class modules_multipleautocomplete{
+class modules_multipleautocompleteContactsTags{
 
   private $baseURL = null;
 
@@ -14,7 +14,7 @@ class modules_multipleautocomplete{
     $s = DIRECTORY_SEPARATOR;
     $app = Dataface_Application::getInstance();
 	
-	$app->addHeadContent('<script src="'.htmlspecialchars($this->getBaseURL().'/js/multipleautocomplete.js').'"></script>');
+	$app->addHeadContent('<script src="'.htmlspecialchars($this->getBaseURL().'/js/multipleautocompleteContactsTags.js').'"></script>');
 	
 	if ( !class_exists('Dataface_FormTool')){
       $app->registerEventListener('Dataface_FormTool::init', array($this, '_registerWidget'));
@@ -24,6 +24,6 @@ class modules_multipleautocomplete{
   }
   
   public function _registerWidget(Dataface_FormTool $formTool){
-    $formTool->registerWidgetHandler('multipleautocomplete', dirname(__FILE__).'/multipleautocompletewidget.php', 'Dataface_FormTool_multipleautocomplete');
+    $formTool->registerWidgetHandler('multipleautocompleteContactsTags', dirname(__FILE__).'/multipleautocompletewidgetContactsTags.php', 'Dataface_FormTool_multipleautocompleteContactsTags');
   }
 }
