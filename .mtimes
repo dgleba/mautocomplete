@@ -48,10 +48,6 @@
 1394462050|modules/multipleautocomplete/multipleautocompletewidget.php
 5|actions/multipleautocomplete.php
 1394542578|conf.ini
-1394551338|modules/multipleautocomplete/actions/action_multipleautocomplete.php
-1394551352|modules/multipleautocomplete/actions/field.ini
-1394550409|modules/multipleautocomplete/actions/field_handler.php
-1394550448|modules/multipleautocomplete/js/multipleautocomplete.js
 1394550448|modules/multipleautocomplete/js/multipleautocompleteTags.js
 1394542629|modules/multipleautocomplete/multipleautocomplete.php
 1394482113|modules/multipleautocompleteContactsTags/actions/action_multipleautocompleteContactsTags.php
@@ -59,4 +55,11 @@
 1394541521|modules/multipleautocompleteContactsTags/multipleautocompleteContactsTags.php
 1394542239|modules/multipleautocompleteContactsTags/multipleautocompletewidgetContactsTags.php
 1394550715|tables/contacts/fields.ini
-1394471158|tables/contacts/valuelists.ini
+1394557326|modules/multipleautocomplete/actions/action_multipleautocomplete.php
+1394557326|modules/multipleautocomplete/actions/field.ini
+1394557326|modules/multipleautocomplete/actions/field_handler.php
+1394557451|modules/multipleautocomplete/actions/multipleautocompleteField.tmp
+1394557243|modules/multipleautocomplete/actions/multipleautocompleteField_handler.php
+1394553439|modules/multipleautocomplete/js/multipleautocomplete.js
+1394553439|tables/contacts/valuelists.ini
+1394557422|tables/contacts_tags/fields.ini
