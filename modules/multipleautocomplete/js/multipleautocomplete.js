@@ -12,8 +12,21 @@
     }
 	
 	$(".xf-multipleautocomplete").click(function(){
-      var field_name = $(this).attr('name');
-	  $.post( "modules/multipleautocomplete/actions/field_handler.php", { "name": field_name } );
+	
+	var table_name;
+	
+	var VarSearch = "-table";
+	var SearchString = window.location.search.substring(1);
+    var VariableArray = SearchString.split('&');
+    for(var i = 0; i < VariableArray.length; i++){
+      var KeyValuePair = VariableArray[i].split('=');
+      if(KeyValuePair[0] == VarSearch){
+        table_name = KeyValuePair[1];
+      }
+    }
+	
+    var field_name = $(this).attr('name');
+	  $.post( "modules/multipleautocomplete/actions/multipleautocompleteField_handler.php", { "fname": field_name, "tname": table_name } );
     });
     
     $(".xf-multipleautocomplete")
