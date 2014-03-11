@@ -1,5 +1,5 @@
 <?php
-require_once "configphp.dbc";
+require_once "../../../configphp.dbc";
 $conn = mysql_connect($dbhost, $dbuser, $dbpass) or die('Error connecting to mysql');
 mysql_select_db($dbname);
 $return_arr = array();
