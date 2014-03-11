@@ -47,7 +47,6 @@
 1394481111|actions/tags.php
 1394462050|modules/multipleautocomplete/multipleautocompletewidget.php
 5|actions/multipleautocomplete.php
-1394542578|conf.ini
 1394550448|modules/multipleautocomplete/js/multipleautocompleteTags.js
 1394542629|modules/multipleautocomplete/multipleautocomplete.php
 1394482113|modules/multipleautocompleteContactsTags/actions/action_multipleautocompleteContactsTags.php
@@ -61,6 +60,8 @@
 1394553439|modules/multipleautocomplete/js/multipleautocomplete.js
 1394553439|tables/contacts/valuelists.ini
 1394557422|tables/contacts_tags/fields.ini
-1394565420|modules/multipleautocomplete/actions/multipleautocompleteField.tmp
 1394565401|modules/multipleautocomplete/actions/multipleautocompleteField_handler.php
 1394565366|tables/contacts/multipleautocomplete.txt
+1394566111|conf.ini
+1394569141|modules/multipleautocomplete/Readme.md
+1394566375|modules/multipleautocomplete/actions/multipleautocompleteField.tmp
