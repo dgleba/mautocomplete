@@ -3,31 +3,39 @@ session_start();
 $sitepath = $ENV.DATAFACE_SITE_PATH;
 $_SESSION['site_path'] = $sitepath;
 
-class modules_multipleautocomplete{
-
+class modules_multipleautocomplete
+{
   private $baseURL = null;
-
-  public function getBaseURL(){
-    if ( !isset($this->baseURL) ){
+  
+  public function getBaseURL()
+  {
+    if (!isset($this->baseURL))
+	{
       $this->baseURL = Dataface_ModuleTool::getInstance()->getModuleURL(__FILE__);
     }
     return $this->baseURL;
   }
-
-  public function __construct(){
+  
+  public function __construct()
+  {
     $s = DIRECTORY_SEPARATOR;
     $app = Dataface_Application::getInstance();
 	
 	$app->addHeadContent('<script src="'.htmlspecialchars($this->getBaseURL().'/js/multipleautocomplete.js').'"></script>');
 	
-	if ( !class_exists('Dataface_FormTool')){
+	if ( !class_exists('Dataface_FormTool'))
+	{
       $app->registerEventListener('Dataface_FormTool::init', array($this, '_registerWidget'));
-    }else{
+    }
+	else
+	{
       $this->_registerWidget(Dataface_FormTool::getInstance());
     }
   }
   
-  public function _registerWidget(Dataface_FormTool $formTool){
+  public function _registerWidget(Dataface_FormTool $formTool)
+  {
     $formTool->registerWidgetHandler('multipleautocomplete', dirname(__FILE__).'/multipleautocompletewidget.php', 'Dataface_FormTool_multipleautocomplete');
   }
 }
+?>

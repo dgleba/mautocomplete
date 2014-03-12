@@ -1,27 +1,5 @@
 <FilesMatch "\.ini$">
-Deny from all
+  Deny from all
 </FilesMatch>
 
 php_flag display_errors on
-
-
-#uncomment this to show a temporarily closed message.
-# ErrorDocument 503 "This website is temporarily closed for maintenance. It should reopen by in a few minutes. David Gleba."
-# RewriteEngine On
-# # TO ALLOW YOURSELF TO VISIT THE SITE, CHANGE 111 222 333 444 TO YOUR IP ADDRESS. 
-# RewriteCond %{REMOTE_ADDR} !^111\.222\.333\.444$
-# RewriteRule .* - [R=503,L]
-# 
-
-
-
-
-
-# 
-# 
-# 
-# 
-# 
-#
-
- 
