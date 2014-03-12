@@ -58,7 +58,7 @@ Alternatively you can specify in the *multipleautocomplete.txt* file if you wish
 
 ---
 
-If the autocomplete is case-sensitive, that is a problem with the collation of your autocomplete tables. In PHPMyAdmin, navigate to your database, then the table which contains the autocomplete data, and changethe collation of your columns to 'latin1_swedish_ci' (it's the one I use so I know it works)
+If the autocomplete is case-sensitive, that is a problem with the collation of your autocomplete tables. In PHPMyAdmin, navigate to your database, then the table which contains the autocomplete data, and change the collation of your columns to ```utf8_general_ci``` (it's the one I use so I know it works). Or you can use the collation_converter app to convert an entire database to the urtf8 collation.
 
 ---
 
