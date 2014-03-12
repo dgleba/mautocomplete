@@ -3,7 +3,20 @@ session_start();
 $multipleautocomplete_field_name = $_SESSION['field_name'];
 $multipleautocomplete_table_name = $_SESSION['table_name'];
 
-require_once "../../../configphp.dbc";
+$multipleautocomplete_database = parse_ini_file("../../../config.dbc");
+
+foreach ($multipleautocomplete_database as $key => $value)
+{
+  if ($key == 'host')
+    $dbhost = $value;
+  elseif ($key == 'user')
+    $dbuser = $value;
+  elseif ($key == 'password')
+    $dbpass = $value;
+  else
+    $dbname = $value;
+}
+
 $conn = mysql_connect($dbhost, $dbuser, $dbpass) or die('Error connecting to mysql');
 mysql_select_db($dbname);
 $return_arr = array();
