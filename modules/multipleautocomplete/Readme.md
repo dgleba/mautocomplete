@@ -1,7 +1,7 @@
 **multipleautocomplete widget Readme.md**
 -
 ---
-3/11/2014 Rev.1
+3/12/2014 Rev.3
 
 ---
 Introduction
@@ -21,28 +21,18 @@ This module adds the multiple auto-complete widget to a module, allowing you to 
 ```
   modules_multipleautocomplete=modules/multipleautocomplete/multipleautocomplete.php
 ```
-3.in the root of your app, create a new file called *configphp.dbc* and add the following to it:
-```
-<?php
-$dbhost = 'localhost';
-$dbuser = '';
-$dbpass = '';
-$dbname = 'testapp1';
-?>
-```
-where dbhost is the host name of your database. dbuser and dbpass are the username/password combination of the phpmyadmin login. dbname is the name of the database you're using for this app.
+3.In the appropriate table folder in /tables (ie yourapp/tables/table1) if you wish to use multipleautocomplete for a field do the following:
 
-4.In the appropriate table folder in /tables (ie yourapp/tables/table1) if you wish to use multipleautocomplete for a field do the following:
-
-4a.Within *fields.ini*, add the following to the field(s) you wish to make autocomplete.
+3a.Within *fields.ini*, add the following to the field(s) you wish to make autocomplete.
 ```
 widget:type=multipleautocomplete
 ```
-4b.Create the file *multipleautocomplete.txt* in this folder and add the following:
+3b.Create the file *valuelists.ini* in this folder and add the following:
 ```
-record_name = table_name
+[fields_name]
+  __sql__ = "SELECT column_name FROM table_name"
 ```
-Replace table_name with the name of the table which will store the data for autocompletion. Replace record_name with the name of the record within that table. See below for more details.
+Replace fields_name with the name of the field from *fields.ini* which you have specified as multipleautocomplete. Replace table_name with the name of the table which will store the data for autocompletion. Replace column_name with the name of the column within that table. See below for more details.
 
 ---
 
