@@ -2,8 +2,9 @@
 session_start();
 $multipleautocomplete_field_name = $_SESSION['field_name'];
 $multipleautocomplete_table_name = $_SESSION['table_name'];
+$sitepath = $_SESSION['site_path'];
 
-$multipleautocomplete_database = parse_ini_file("../../../config.dbc");
+$multipleautocomplete_database = parse_ini_file($sitepath."/config.dbc");
 
 foreach ($multipleautocomplete_database as $key => $value)
 {
@@ -13,7 +14,7 @@ foreach ($multipleautocomplete_database as $key => $value)
     $dbuser = $value;
   elseif ($key == 'password')
     $dbpass = $value;
-  else
+  elseif ($key == 'name')
     $dbname = $value;
 }
 

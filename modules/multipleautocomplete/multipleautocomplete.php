@@ -1,4 +1,8 @@
 <?php
+session_start();
+$sitepath = $ENV.DATAFACE_SITE_PATH;
+$_SESSION['site_path'] = $sitepath;
+
 class modules_multipleautocomplete{
 
   private $baseURL = null;
