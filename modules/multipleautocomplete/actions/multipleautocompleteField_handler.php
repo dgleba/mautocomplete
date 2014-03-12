@@ -1,11 +1,12 @@
 <?php
 session_start();
+$sitepath = $_SESSION['site_path'];
 
 $multipleautocomplete_field_name = $_POST['fname'];
 $multipleautocomplete_table_name = $_POST['tname'];
 $table_exist = false;
 
-$file_array = file("../../../tables/contacts/valuelists.ini");
+$file_array = file($sitepath."/tables/". $multipleautocomplete_table_name ."/valuelists.ini");
 $column_table_php_index = 1;
 $valueindex = 1;
 
