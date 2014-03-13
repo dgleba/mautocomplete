@@ -53,7 +53,6 @@
 1394653596|.gitignore
 1394653572|.hgignore
 1394653556|.htaccess
-1394653533|conf.ini
 1394653487|config.dbc
 1394653478|index.php
 1394655372|modules/multipleautocomplete/Readme.md
@@ -65,3 +64,6 @@
 1394653891|tables/contacts/fields.ini
 1394653666|tables/contacts/valuelists.ini
 1394653666|tables/contacts_tags/fields.ini
+1394737913|conf.ini
+1394738077|modules/multipleautocomplete/version.txt
+1394737937|version.txt
