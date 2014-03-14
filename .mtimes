@@ -58,12 +58,12 @@
 1394655372|modules/multipleautocomplete/Readme.md
 1394654723|modules/multipleautocomplete/actions/action_multipleautocomplete.php
 1394654615|modules/multipleautocomplete/actions/multipleautocompleteField_handler.php
-1394654547|modules/multipleautocomplete/js/multipleautocomplete.js
-1394654084|modules/multipleautocomplete/multipleautocomplete.php
 1394653972|modules/multipleautocomplete/multipleautocompletewidget.php
 1394653891|tables/contacts/fields.ini
 1394653666|tables/contacts/valuelists.ini
 1394653666|tables/contacts_tags/fields.ini
 1394737913|conf.ini
-1394738077|modules/multipleautocomplete/version.txt
 1394737937|version.txt
+1394806874|modules/multipleautocomplete/js/multipleautocomplete.js
+1394806748|modules/multipleautocomplete/multipleautocomplete.php
+1394806892|modules/multipleautocomplete/version.txt
