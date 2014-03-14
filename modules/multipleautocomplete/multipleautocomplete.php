@@ -3,6 +3,22 @@ session_start();
 $sitepath = $ENV.DATAFACE_SITE_PATH;
 $_SESSION['site_path'] = $sitepath;
 
+$working_dir = 'modules/multipleautocomplete/actions';
+$current_dir = dirname(__FILE__);
+$findme = 'xataface';
+$pos = strpos($current_dir, $findme);
+
+if ($pos !== false)
+{
+  $working_dir = '../xataface/modules/multipleautocomplete/actions';
+}
+?>
+
+<script>
+var working_dir = <?php echo json_encode($working_dir); ?>;
+</script>
+
+<?php
 class modules_multipleautocomplete
 {
   private $baseURL = null;

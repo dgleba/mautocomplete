@@ -1,6 +1,7 @@
 (function()
     {
     var $ = jQuery;
+	var site_path = working_dir;
     
     registerXatafaceDecorator(function(node)
 	  {
@@ -34,7 +35,7 @@
           }
 	      
           var field_name = $(this).attr('name');
-	      $.post( "modules/multipleautocomplete/actions/multipleautocompleteField_handler.php", { "fname": field_name, "tname": table_name } );
+	      $.post( site_path+"/multipleautocompleteField_handler.php", { "fname": field_name, "tname": table_name } );
         
           if (event.keyCode === $.ui.keyCode.TAB && $(this).data("ui-autocomplete").menu.active)
 		  {
@@ -45,7 +46,7 @@
       .autocomplete({
       
           source: function(request, response) {
-            $.getJSON("modules/multipleautocomplete/actions/action_multipleautocomplete.php",
+            $.getJSON(site_path+"/action_multipleautocomplete.php",
 			{term: extractLast(request.term)},
 			response);
           },
