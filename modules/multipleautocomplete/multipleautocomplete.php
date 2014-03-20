@@ -1,23 +1,10 @@
 <?php
-session_start();
-$sitepath = $ENV.DATAFACE_SITE_PATH;
-$_SESSION['site_path'] = $sitepath;
-
-$working_dir = 'modules/multipleautocomplete/actions';
-$current_dir = dirname(__FILE__);
-$findme = 'xataface';
-$pos = strpos($current_dir, $findme);
-
-if ($pos !== false)
-{
-  $working_dir = '../xataface/modules/multipleautocomplete/actions';
-}
+$paths = parse_ini_file(DATAFACE_SITE_PATH."/paths.ini");
+setcookie("app_path", DATAFACE_SITE_PATH, 0, '/');
 ?>
-
 <script>
-var working_dir = <?php echo json_encode($working_dir); ?>;
+var working_dir = <?php echo json_encode($paths['action_path']); ?>;
 </script>
-
 <?php
 class modules_multipleautocomplete
 {
@@ -54,4 +41,3 @@ class modules_multipleautocomplete
     $formTool->registerWidgetHandler('multipleautocomplete', dirname(__FILE__).'/multipleautocompletewidget.php', 'Dataface_FormTool_multipleautocomplete');
   }
 }
-?>

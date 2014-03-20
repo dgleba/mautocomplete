@@ -1,7 +1,7 @@
 **multipleautocomplete widget Readme.md**
 -
 ---
-3/14/2014 Rev.5
+3/20/2014 Rev.6
 
 ---
 Introduction
@@ -23,15 +23,24 @@ This module adds the multiple auto-complete widget to a module, allowing you to 
   modules_multipleautocomplete=modules/multipleautocomplete/multipleautocomplete.php
 ```
 
-3.In the appropriate table folder in /tables (ie yourapp/tables/table1) if you wish to use multipleautocomplete for a field do the following:
+3.Create a *paths.ini* in the root of your app folder and add the following:
 
-3a.Within *fields.ini*, add the following to the field(s) you wish to make autocomplete.
+```
+;Relative path to multipleautocomplete actions folder	.. to go up a level
+action_path = "../xataface/modules/multipleautocomplete/actions"
+```
+
+This path is always relative to your app. It starts in the root of your app and you must navigate it to wherever you have the modules action folder
+
+4.In the appropriate table folder in /tables (ie yourapp/tables/table1) if you wish to use multipleautocomplete for a field do the following:
+
+4a.Within *fields.ini*, add the following to the field(s) you wish to make autocomplete.
 
 ```
 widget:type=multipleautocomplete
 ```
 
-3b.Create the file *valuelists.ini* in this folder and add the following:
+4b.Create the file *valuelists.ini* in this folder and add the following:
 
 ```
 [fields_name]
@@ -50,7 +59,7 @@ By default the widget will look for a table with the name of *table-you-have-ope
 
 if you wish, you can create this table in PHPmyadmin and add as many columns as you need (make an autoincrementing primary field called 'id' first!). The widget will be able to intelligently differentiate between the multiple entries in one record (ie if a table has names, numbers etc stored in it, you can enter them all in one record, but they will be used individually later).
 
-Alternatively you can specify in the *multipleautocomplete.txt* file if you wish to have separate tables (again these tables **MUST** have an AI, primary field called 'id')
+Alternatively you can specify in the *valuelists.ini* file if you wish to have separate tables (again these tables **MUST** have an AI, primary field called 'id')
 
 ---
 
@@ -59,8 +68,6 @@ Alternatively you can specify in the *multipleautocomplete.txt* file if you wish
 ---
 
 If the autocomplete is case-sensitive, that is a problem with the collation of your autocomplete tables. In PHPMyAdmin, navigate to your database, then the table which contains the autocomplete data, and change the collation of your columns to ```utf8_general_ci``` (it's the one I use so I know it works). Or you can use the collation_converter app to convert an entire database to the urtf8 collation.
-
-The modules folder must be located in either ```htdocs/yourapp/``` or in ```htdocs/xataface/```. If you have it anywhere else (for example if you put the xataface directory into your apps root and thn have the modules folder in xataface) it will not work. This is due to how Javascript handles it working directory... Sorry.
 
 valuelists.ini must be formatted exactly as how it is shown in the instructions above. The way the widget handler splits up the string as it's parsing the ini file, it would take a lot more code to get it to be compatible with commands such as 'order by', 'where' etc. Sorry for the inconvenience.
 

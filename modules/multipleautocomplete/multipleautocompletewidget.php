@@ -4,6 +4,7 @@ class Dataface_FormTool_multipleautocomplete
   function buildWidget($record, &$field, $form, $formFieldName, $new=false)
   {
     $factory = Dataface_FormTool::factory();
+	$widget =& $field['widget'];
 			
 	$atts = array(
       'class' => 'xf-multipleautocomplete'
@@ -14,4 +15,3 @@ class Dataface_FormTool_multipleautocomplete
     return $el;
   }
 }
-?>

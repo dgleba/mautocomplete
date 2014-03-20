@@ -1,0 +1,6 @@
+
+[_database]
+    host="localhost"
+    name="address141"
+    user="root"
+    password="yourpassword"

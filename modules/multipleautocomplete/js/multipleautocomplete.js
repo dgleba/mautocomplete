@@ -19,7 +19,7 @@
       $(".xf-multipleautocomplete")
       
         .bind("keydown", function(event)
-		{
+		{		
 	      var table_name;
 	      var VarSearch = "-table";
 	      var SearchString = window.location.search.substring(1);
@@ -35,7 +35,7 @@
           }
 	      
           var field_name = $(this).attr('name');
-	      $.post( site_path+"/multipleautocompleteField_handler.php", { "fname": field_name, "tname": table_name } );
+		  $.post( site_path+"/multipleautocompleteField_handler.php", { "fname": field_name, "tname": table_name } );
         
           if (event.keyCode === $.ui.keyCode.TAB && $(this).data("ui-autocomplete").menu.active)
 		  {
