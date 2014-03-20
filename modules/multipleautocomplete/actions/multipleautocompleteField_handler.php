@@ -1,10 +1,10 @@
 <?php
-session_start();
-$sitepath = $_SESSION['site_path'];
 $multipleautocomplete_field_name = $_POST['fname'];
 $multipleautocomplete_table_name = $_POST['tname'];
+$site_path = $_COOKIE['app_path'];
+
 $table_exist = false;
-$file_array = file($sitepath."/tables/". $multipleautocomplete_table_name ."/valuelists.ini");
+$file_array = file($site_path."/tables/". $multipleautocomplete_table_name ."/valuelists.ini");
 $column_table_php_index = 1;
 $valueindex = 1;
 
@@ -49,6 +49,5 @@ foreach ($valuelist as $key => $value)
 if(!$table_exist)
   $multipleautocomplete_table_name = $multipleautocomplete_table_name.'_tags';
   
-$_SESSION['field_name'] = $multipleautocomplete_field_name;
-$_SESSION['table_name'] = $multipleautocomplete_table_name;
-?>
+setcookie("field_name", $multipleautocomplete_field_name);
+setcookie("table_name", $multipleautocomplete_table_name);
