@@ -27,7 +27,6 @@ if ($conn)
 
   while ($row = mysql_fetch_array($fetch, MYSQL_ASSOC))
   {
-    $row_array['id'] = $row['id'];
     $row_array['value'] = $row[$multipleautocomplete_field_name];
     array_push($return_arr, $row_array);
   }
