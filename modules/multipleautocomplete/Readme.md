@@ -1,7 +1,7 @@
 **multipleautocomplete widget Readme.md**
 -
 ---
-3/20/2014 Rev.6
+3/21/2014 Rev.7
 
 ---
 Introduction
@@ -57,9 +57,9 @@ Replace fields_name with the name of the field from *fields.ini* which you have 
 
 By default the widget will look for a table with the name of *table-you-have-open_tags*. For example if I have a table named *test1*, autocomplete will look for data in the table *test1_tags*.
 
-if you wish, you can create this table in PHPmyadmin and add as many columns as you need (make an autoincrementing primary field called 'id' first!). The widget will be able to intelligently differentiate between the multiple entries in one record (ie if a table has names, numbers etc stored in it, you can enter them all in one record, but they will be used individually later).
+if you wish, you can create this table in PHPmyadmin and add as many columns as you need. The widget will be able to intelligently differentiate between the multiple entries in one record (ie if a table has names, numbers etc stored in it, you can enter them all in one record, but they will be used individually later).
 
-Alternatively you can specify in the *valuelists.ini* file if you wish to have separate tables (again these tables **MUST** have an AI, primary field called 'id')
+Alternatively you can specify in the *valuelists.ini* file if you wish to have separate tables.
 
 ---
 
@@ -68,8 +68,6 @@ Alternatively you can specify in the *valuelists.ini* file if you wish to have s
 ---
 
 If the autocomplete is case-sensitive, that is a problem with the collation of your autocomplete tables. In PHPMyAdmin, navigate to your database, then the table which contains the autocomplete data, and change the collation of your columns to ```utf8_general_ci``` (it's the one I use so I know it works). Or you can use the collation_converter app to convert an entire database to the urtf8 collation.
-
-valuelists.ini must be formatted exactly as how it is shown in the instructions above. The way the widget handler splits up the string as it's parsing the ini file, it would take a lot more code to get it to be compatible with commands such as 'order by', 'where' etc. Sorry for the inconvenience.
 
 ---
 
