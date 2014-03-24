@@ -1,7 +1,7 @@
 **multipleautocomplete widget Readme.md**
 -
 ---
-3/21/2014 Rev.7
+3/24/2014 Rev.8
 
 ---
 Introduction
@@ -48,18 +48,6 @@ widget:type=multipleautocomplete
 ```
 
 Replace fields_name with the name of the field from *fields.ini* which you have specified as multipleautocomplete. Replace table_name with the name of the table which will store the data for autocompletion. Replace column_name with the name of the column within that table. See below for more details.
-
----
-
-**Autocomplete Tables:**
-
----
-
-By default the widget will look for a table with the name of *table-you-have-open_tags*. For example if I have a table named *test1*, autocomplete will look for data in the table *test1_tags*.
-
-if you wish, you can create this table in PHPmyadmin and add as many columns as you need. The widget will be able to intelligently differentiate between the multiple entries in one record (ie if a table has names, numbers etc stored in it, you can enter them all in one record, but they will be used individually later).
-
-Alternatively you can specify in the *valuelists.ini* file if you wish to have separate tables.
 
 ---
 
