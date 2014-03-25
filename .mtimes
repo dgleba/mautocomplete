@@ -4,8 +4,6 @@
 1395337163|README.md
 1395347334|conf.ini
 1395169274|conf/ApplicationDelegate.php
-1394653487|config.dbc
-1393553320|config.dbc.example
 1395326155|index.php
 1395675608|modules/multipleautocomplete/Readme.md
 1395423644|modules/multipleautocomplete/actions/action_multipleautocomplete.php
@@ -22,5 +20,5 @@
 1395326091|paths.ini
 1395674330|tables/contacts/fields.ini
 1395681909|tables/contacts/valuelists.ini
-1395688779|.mtimes
 1395688760|version.txt
+|config.dbc
