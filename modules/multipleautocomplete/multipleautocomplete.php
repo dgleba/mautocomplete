@@ -1,9 +1,14 @@
 <?php
-$paths = parse_ini_file(DATAFACE_SITE_PATH."/paths.ini");
-setcookie("app_path", DATAFACE_SITE_PATH, 0, '/');
+$working_dir = "modules/multipleautocomplete/actions";
+
+if (strpos(dirname(__FILE__), "xataface") !== false)
+{
+  $working_dir = "../xataface/" . $working_dir;
+}
+
 ?>
 <script>
-var working_dir = <?php echo json_encode($paths['action_path']); ?>;
+var working_dir = <?php echo json_encode($working_dir); ?>;
 </script>
 <?php
 class modules_multipleautocomplete

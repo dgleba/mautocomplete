@@ -1,7 +1,12 @@
 <?php
 $multipleautocomplete_field_name = "[".$_POST['fname']."]";
 $multipleautocomplete_table_name = $_POST['tname'];
-$site_path = $_COOKIE['app_path'];
+
+$app_URL = explode('/', $_SERVER['HTTP_REFERER']);
+$app_name_index = count($app_URL) - 2;
+$app_name = $app_URL[$app_name_index];
+
+$site_path = $_SERVER['DOCUMENT_ROOT'] . "/" . $app_name;
 
 $field_check = false;
 
@@ -79,3 +84,4 @@ $multipleautocomplete_table_name = trim($rough_column_table_split[1]);
 
 setcookie("field_name", $multipleautocomplete_field_name);
 setcookie("table_name", $multipleautocomplete_table_name);
+setcookie("app_path", $site_path);
