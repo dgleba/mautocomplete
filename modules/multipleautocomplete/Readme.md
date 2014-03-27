@@ -1,7 +1,7 @@
 **multipleautocomplete widget Readme.md**
 -
 ---
-3/24/2014 Rev.8
+3/27/2014 Rev.9
 
 ---
 Introduction
@@ -23,24 +23,15 @@ This module adds the multiple auto-complete widget to a module, allowing you to 
   modules_multipleautocomplete=modules/multipleautocomplete/multipleautocomplete.php
 ```
 
-3.Create a *paths.ini* in the root of your app folder and add the following:
+3.In the appropriate table folder in /tables (ie yourapp/tables/table1) if you wish to use multipleautocomplete for a field do the following:
 
-```
-;Relative path to multipleautocomplete actions folder	.. to go up a level
-action_path = "../xataface/modules/multipleautocomplete/actions"
-```
-
-This path is always relative to your app. It starts in the root of your app and you must navigate it to wherever you have the modules action folder
-
-4.In the appropriate table folder in /tables (ie yourapp/tables/table1) if you wish to use multipleautocomplete for a field do the following:
-
-4a.Within *fields.ini*, add the following to the field(s) you wish to make autocomplete.
+3a.Within *fields.ini*, add the following to the field(s) you wish to make autocomplete.
 
 ```
 widget:type=multipleautocomplete
 ```
 
-4b.Create the file *valuelists.ini* in this folder and add the following:
+3b.Create the file *valuelists.ini* in this folder and add the following:
 
 ```
 [fields_name]
