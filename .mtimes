@@ -6,7 +6,6 @@
 1395169274|conf/ApplicationDelegate.php
 1395326155|index.php
 1395423644|modules/multipleautocomplete/actions/action_multipleautocomplete.php
-1395318471|modules/multipleautocomplete/js/multipleautocomplete.js
 1395325529|modules/multipleautocomplete/multipleautocompletewidget.php
 1395324081|modules/multipleautocomplete/tests/debug.php
 1394482113|modules/multipleautocompleteContactsTags/actions/action_multipleautocompleteContactsTags.php
@@ -22,3 +21,6 @@
 |paths.ini
 1395943397|version.txt
 1395943837|tables/contacts/valuelists.ini
+1396037981|modules/multipleautocomplete/actions/hello.php
+1396037122|modules/multipleautocomplete/actions/hellonoclass.php
+1396037993|modules/multipleautocomplete/js/multipleautocomplete.js
