@@ -46,7 +46,10 @@
       .autocomplete({
       
           source: function(request, response) {
-            $.getJSON(site_path+"/action_multipleautocomplete.php",
+            $.getJSON(site_path+"/action_multipleautocomplete.php",  //original, works.
+            //$.getJSON(site_path+"/hellonoclass.php", //working, calls the hello action directly
+            //$.getJSON("http://localhost/mautocomplete-module/index.php?-action=hello", //calling the URL directly, does not work.
+            //$.getJSON(DATAFACE_SITE_HREF+"?-action=hello", //trying it Steve's way, doesn't work.
 			{term: extractLast(request.term)},
 			response);
           },
