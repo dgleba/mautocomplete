@@ -13,14 +13,13 @@
 1394541521|modules/multipleautocompleteContactsTags/multipleautocompleteContactsTags.php
 1394542239|modules/multipleautocompleteContactsTags/multipleautocompletewidgetContactsTags.php
 1395674330|tables/contacts/fields.ini
-|config.dbc
 1395943366|modules/multipleautocomplete/Readme.md
 1395943502|modules/multipleautocomplete/actions/multipleautocompleteField_handler.php
 1395943276|modules/multipleautocomplete/multipleautocomplete.php
 1395943408|modules/multipleautocomplete/version.txt
-|paths.ini
 1395943837|tables/contacts/valuelists.ini
 1396037981|modules/multipleautocomplete/actions/hello.php
 1396037122|modules/multipleautocomplete/actions/hellonoclass.php
 1396037993|modules/multipleautocomplete/js/multipleautocomplete.js
 1396233148|version.txt
+1396233922|.mtimes
