@@ -30,8 +30,6 @@
 |modules/multipleautocomplete/actions/hellonoclass.php
 1396378308|version.txt
 |modules/multipleautocomplete/actions/multipleautocompleteField_handler.php
-1396372217|modules/multipleautocomplete/actions/multipleautocompleteaction.php
-1396378609|modules/multipleautocomplete/js/multipleautocomplete.js
 1396378533|modules/multipleautocomplete/version.txt
 1395943366|modules/multipleautocompleteNC/Readme.md
 1395943493|modules/multipleautocompleteNC/actions/action_multipleautocomplete.php
@@ -44,3 +42,5 @@
 1395324081|modules/multipleautocompleteNC/tests/debug.php
 1396278040|modules/multipleautocompleteNC/version.txt
 1396381151|modules/multipleautocomplete/multipleautocomplete.php
+1396383941|modules/multipleautocomplete/actions/multipleautocompleteaction.php
+1396383392|modules/multipleautocomplete/js/multipleautocomplete.js

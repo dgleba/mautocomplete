@@ -3,6 +3,11 @@
     var $ = jQuery;
 	var table_name;
 	var field_name;
+	var site_URL = document.URL;
+	var URL_broken = site_URL.split(".");
+	var URL_split = URL_broken[0].split("/");
+	var a = URL_split.indexOf("index") - 1;
+	var app_name = URL_split[a];
     
     registerXatafaceDecorator(function(node)
 	  {
@@ -47,7 +52,7 @@
           source: function(request, response) {
             $.getJSON("http://localhost/mautocomplete-module/index.php?-action=multipleautocompleteaction", //calling the URL directly, does not work.
             //$.getJSON(DATAFACE_SITE_HREF+"?-action=hello", //trying it Steve's way, doesn't work.
-			{fname: window.field_name, tname: window.table_name, term: extractLast(request.term)},
+			{fname: window.field_name, tname: window.table_name, aname: app_name, term: extractLast(request.term)},
 			response);
           },
 	      

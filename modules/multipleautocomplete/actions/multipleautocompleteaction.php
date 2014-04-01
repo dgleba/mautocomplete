@@ -5,9 +5,19 @@ class actions_multipleautocompleteaction
   {
       $multipleautocomplete_field_name = "[".$_GET['fname']."]";
       $multipleautocomplete_table_name = $_GET['tname'];
+      $multipleautocomplete_app_name = $_GET['aname'];
 	  
       $site_path = DATAFACE_SITE_PATH;
-      
+	  $site_array = explode("/", $site_path);
+	  $site_path = array_pop($site_array);
+	  $site_path = "";
+	  
+	  foreach ($site_array as $value)
+	  {
+	    $site_path = $site_path . $value . "/";
+	  }
+	  $site_path = $site_path . $multipleautocomplete_app_name;
+	  
       $field_check = false;
       
       $fields_array = file($site_path . "/tables/". $multipleautocomplete_table_name ."/fields.ini");
