@@ -1,11 +1,4 @@
 <?php
-$working_dir = "modules/multipleautocomplete/actions";
-
-if (strpos(dirname(__FILE__), "xataface") !== false)
-{
-  $working_dir = "../xataface/" . $working_dir;
-}
-
 class modules_multipleautocomplete
 {
   private $baseURL = null;
