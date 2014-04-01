@@ -2,7 +2,7 @@
 
 Version:
 
-15 - 4/1/2014 2:55:28 PM
+15 - 2014-03-31_Mon_11.00-AM multipleautocompleteNC is the working multipleautocomplete using no classes. NOt using Xataface methods in the action php files.
 14 - 3/27/2014 2:03:28 PM
 13 - 3/24/2014 1:30:53 PM
 12 - 3/21/2014 1:44:22 PM

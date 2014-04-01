@@ -1,8 +1,7 @@
 (function()
     {
     var $ = jQuery;
-	var table_name;
-	var field_name;
+	var site_path = working_dir;
     
     registerXatafaceDecorator(function(node)
 	  {
@@ -21,6 +20,7 @@
       
         .bind("keydown", function(event)
 		{		
+	      var table_name;
 	      var VarSearch = "-table";
 	      var SearchString = window.location.search.substring(1);
           var VariableArray = SearchString.split('&');
@@ -30,12 +30,13 @@
             var KeyValuePair = VariableArray[i].split('=');
             if (KeyValuePair[0] == VarSearch)
 		    {
-              window.table_name = KeyValuePair[1];
+              table_name = KeyValuePair[1];
             }
           }
 	      
-          window.field_name = $(this).attr('name');
-		  
+          var field_name = $(this).attr('name');
+		  $.post( site_path+"/multipleautocompleteField_handler.php", { "fname": field_name, "tname": table_name } );
+        
           if (event.keyCode === $.ui.keyCode.TAB && $(this).data("ui-autocomplete").menu.active)
 		  {
             event.preventDefault();
@@ -45,9 +46,11 @@
       .autocomplete({
       
           source: function(request, response) {
-            $.getJSON("http://localhost/mautocomplete-module/index.php?-action=multipleautocompleteaction", //calling the URL directly, does not work.
+            $.getJSON(site_path+"/action_multipleautocomplete.php",  //original, works.
+            //$.getJSON(site_path+"/hellonoclass.php", //working, calls the hello action directly
+            //$.getJSON("http://localhost/mautocomplete-module/index.php?-action=hello", //calling the URL directly, does not work.
             //$.getJSON(DATAFACE_SITE_HREF+"?-action=hello", //trying it Steve's way, doesn't work.
-			{fname: window.field_name, tname: window.table_name, term: extractLast(request.term)},
+			{term: extractLast(request.term)},
 			response);
           },
 	      

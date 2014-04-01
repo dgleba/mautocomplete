@@ -6,6 +6,11 @@ if (strpos(dirname(__FILE__), "xataface") !== false)
   $working_dir = "../xataface/" . $working_dir;
 }
 
+?>
+<script>
+var working_dir = <?php echo json_encode($working_dir); ?>;
+</script>
+<?php
 class modules_multipleautocomplete
 {
   private $baseURL = null;
