@@ -5,7 +5,6 @@
 1395347334|conf.ini
 1395169274|conf/ApplicationDelegate.php
 1395326155|index.php
-1395423644|modules/multipleautocomplete/actions/action_multipleautocomplete.php
 1395325529|modules/multipleautocomplete/multipleautocompletewidget.php
 1395324081|modules/multipleautocomplete/tests/debug.php
 1394482113|modules/multipleautocompleteContactsTags/actions/action_multipleautocompleteContactsTags.php
@@ -13,14 +12,25 @@
 1394541521|modules/multipleautocompleteContactsTags/multipleautocompleteContactsTags.php
 1394542239|modules/multipleautocompleteContactsTags/multipleautocompletewidgetContactsTags.php
 1395674330|tables/contacts/fields.ini
+<<<<<<< HEAD
 |config.dbc
+=======
+>>>>>>> 0c55dcb4ad491ba991e5e42bf7e3524ef1854124
 1395943366|modules/multipleautocomplete/Readme.md
 1395943502|modules/multipleautocomplete/actions/multipleautocompleteField_handler.php
 1395943276|modules/multipleautocomplete/multipleautocomplete.php
 1395943408|modules/multipleautocomplete/version.txt
+<<<<<<< HEAD
 |paths.ini
-1395943397|version.txt
+=======
+>>>>>>> 0c55dcb4ad491ba991e5e42bf7e3524ef1854124
 1395943837|tables/contacts/valuelists.ini
-1396037981|modules/multipleautocomplete/actions/hello.php
-1396037122|modules/multipleautocomplete/actions/hellonoclass.php
 1396037993|modules/multipleautocomplete/js/multipleautocomplete.js
+<<<<<<< HEAD
+=======
+>>>>>>> 0c55dcb4ad491ba991e5e42bf7e3524ef1854124
+1396378495|.mtimes
+|modules/multipleautocomplete/actions/action_multipleautocomplete.php
+|modules/multipleautocomplete/actions/hello.php
+|modules/multipleautocomplete/actions/hellonoclass.php
+1396378308|version.txt
