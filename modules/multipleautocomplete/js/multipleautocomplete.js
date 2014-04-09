@@ -8,6 +8,11 @@
 	var URL_split = URL_broken[0].split("/");
 	var a = URL_split.indexOf("index") - 1;
 	var app_name = URL_split[a];
+	
+	var proto = window.location.protocol;
+	var host = window.location.host;
+	var path = window.location.pathname;
+	var site_action_URL = proto + "//" + host + path;
     
     registerXatafaceDecorator(function(node)
 	  {
@@ -50,8 +55,7 @@
       .autocomplete({
       
           source: function(request, response) {
-            $.getJSON("http://localhost/mautocomplete-module/index.php?-action=multipleautocompleteaction", //calling the URL directly, does not work.
-            //$.getJSON(DATAFACE_SITE_HREF+"?-action=hello", //trying it Steve's way, doesn't work.
+            $.getJSON(site_action_URL+"?-action=multipleautocompleteaction",
 			{fname: window.field_name, tname: window.table_name, aname: app_name, term: extractLast(request.term)},
 			response);
           },
