@@ -1,12 +1,11 @@
 (function()
     {
     var $ = jQuery;
+	var site_URL = DATAFACE_SITE_URL;
 	var table_name;
 	var field_name;
-	var site_URL = document.URL;
-	var URL_broken = site_URL.split(".");
-	var URL_split = URL_broken[0].split("/");
-	var a = URL_split.indexOf("index") - 1;
+	var URL_split = site_URL.split("/");
+	var a = URL_split.length - 1;
 	var app_name = URL_split[a];
 	
 	var proto = window.location.protocol;
