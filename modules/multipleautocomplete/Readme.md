@@ -39,9 +39,9 @@ This module adds the multiple auto-complete widget to a module, allowing you to 
 
 Replace fields_name with the name of the field from *fields.ini* which you have specified as multipleautocomplete. Replace table_name with the name of the table which will store the data for autocompletion. Replace column_name with the name of the column within that table. See below for more details.
 
-4. This reads config.dbc in the root folder of your app. Follow the example provided.  *\config.dbc.example*
+4. This module reads the file  ```config.dbc``` in the root folder of your app. Create the file by following the example provided in  ```\config.dbc.example```
 
-This goes in the conf.ini in the root folder of your app.
+Put the following in the ```conf.ini``` in the root folder of your app.
 
 		;put your database credentials in this file. see the example provided.
 		__include__=config.dbc
@@ -58,7 +58,7 @@ This goes in the conf.ini in the root folder of your app.
 
 1. If the autocomplete is case-sensitive, that is a problem with the collation of your autocomplete tables. In PHPMyAdmin, navigate to your database, then the table which contains the autocomplete data, and change the collation of your columns to ```utf8_general_ci``` (it's the one I use so I know it works). Or you can use the collation_converter app to convert an entire database to the urtf8 collation.
 
-2. Item 4 above is a limitation of sorts since it imposes that requirement on your app.
+2. Item 4 above is a limitation 'of sorts' since it imposes that requirement on your app.
 
 
 ---
