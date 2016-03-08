@@ -37,9 +37,9 @@ This module adds the multiple auto-complete widget to a module, allowing you to 
 			  __sql__ = "SELECT column_name FROM table_name"
 	
 
-Replace fields_name with the name of the field from *fields.ini* which you have specified as multipleautocomplete. Replace table_name with the name of the table which will store the data for autocompletion. Replace column_name with the name of the column within that table. See below for more details.
+  Replace fields_name with the name of the field from *fields.ini* which you have specified as multipleautocomplete. Replace table_name with the name of the table which will store the data for autocompletion. Replace column_name with the name of the column within that table. See below for more details.
 
-    4. This module reads the file  ```config.dbc``` in the root folder of your app. Create the file by following the example provided in ```\config.dbc.example```
+ 4. This module reads the file  ```config.dbc``` in the root folder of your app. Create the file by following the example provided in ```\config.dbc.example```
 
 Put the following in the ```conf.ini``` in the root folder of your app.
 
